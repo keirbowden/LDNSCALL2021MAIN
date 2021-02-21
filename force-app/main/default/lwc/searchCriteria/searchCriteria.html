@@ -1,0 +1,35 @@
+<template>
+    <div class="slds-card">
+        <div class="slds-p-around_medium">
+            <div class="slds-text-heading_medium">Enter Search Criteria</div>
+            <template if:true={isLoading}>
+                <lightning-spinner alternative-text="Loading" variant="brand"></lightning-spinner>
+            </template>
+            <template if:false={isLoading}>
+                <div class="slds-var-p-around_medium">
+                    <lightning-layout multiple-rows>
+                        <lightning-layout-item size="12" small-device-size="12" medium-device-size="4"
+                            padding="around-small">
+                            <lightning-combobox name="author" label="Author" value={author} options={authorValues}
+                                variant="label-inline" onchange={authorChanged}></lightning-combobox>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" small-device-size="12" medium-device-size="4"
+                            padding="around-small">
+                            <lightning-combobox name="author" label="Genre" value={genre} options={genreValues}
+                                variant="label-inline" onchange={genreChanged}></lightning-combobox>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="12" small-device-size="12" medium-device-size="4"
+                            padding="around-small">
+                            <div class="slds-var-p-top_xx-small">
+                                <lightning-button-group>
+                                    <lightning-button onclick={search} label="Search"></lightning-button>
+                                    <lightning-button onclick={clearSearch} label="Clear"></lightning-button>
+                                </lightning-button-group>
+                            </div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,32 @@
+<template>
+    <!-- Id, Name, Pages__c, Published_Year__c, Author__r.Name, Genre__c -->
+    <div class="slds-card">
+        <div class="slds-p-around_medium">
+            <div class="slds-text-heading_medium">Search Results</div>
+        </div>
+    </div>
+    <template if:true={noMatches}>
+        <div class="slds-card">
+            <div class="slds-p-around_medium">
+                <div class="slds-text-heading_small">No matches</div>
+            </div>
+        </div>
+    </template>
+    <template if:false={noMatches}>
+        <template for:each={books} for:item="book">
+            <div key={book.id} class="slds-p-around_medium">
+                <lightning-card>
+                    <h3 slot="title">
+                        {book.Name}
+                    </h3>
+                    <div slot="footer">
+                        Published <lightning-formatted-date-time value={book.Published_Year__c} year="numeric"
+                            month="2-digit" day="2-digit"></lightning-formatted-date-time>
+                    </div>
+                    <p class="slds-p-horizontal_small">A {book.Genre__c} work By {book.Author__r.Name}, {book.Pages__c}
+                        pages</p>
+                </lightning-card>
+            </div>
+        </template>
+    </template>
+</template>

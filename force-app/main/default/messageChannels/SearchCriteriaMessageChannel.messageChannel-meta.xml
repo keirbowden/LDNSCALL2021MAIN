@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Message channel to transmit search criteria.</description>
+    <isExposed>true</isExposed>
+    <lightningMessageFields>
+        <description>The id of the author</description>
+        <fieldName>author</fieldName>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <description>The genre</description>
+        <fieldName>genre</fieldName>
+    </lightningMessageFields>
+    <masterLabel>SearchCriteriaMessageChannel</masterLabel>
+</LightningMessageChannel>

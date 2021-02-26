@@ -14,4 +14,4 @@ or for a developer edition, deploy the metadata using the command :
 
 where `<username>` is the username for the org you want to install the package into, that you have previously authenticated using the CLI.
 
-Then install the org-dependent package - you can find details of this in the package repo : [bobbuzz.me.uk/LC2021PKG](bobbuzz.me.uk/LC2021PKG)
+Then install the org-dependent package - you can find details of this in the package repo : [https://bobbuzz.me.uk/LC2021PKG](https://bobbuzz.me.uk/LC2021PKG)
